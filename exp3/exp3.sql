@@ -1,0 +1,45 @@
+
+insert into emp values('E-101','Adarsh',101,'MG Road');
+insert into emp values('E-102','Bonny',101, 'MG Road');
+insert into emp values('E-103','Catherine', 102, 'Cochin');
+insert into emp values('E-104','Glenn', 104, 'Ernakulam');
+insert into emp values('E-105','George', 201,'MG Road');
+insert into emp values('E-106','Hayes', 101, 'MG Road');
+insert into emp values('E-107','Johnson',102,'Cochin');
+insert into emp values('E-108','Jones', 101, 'Cochin');
+insert into emp values('E-109','Karthik', 101, 'Ernakulam');
+insert into emp values('E-110','Lavanya', 101, 'Palace Road');
+insert into emp values('E-111','Niharika', 102, 'Ernakulam');
+insert into company values('SBI', 'MG Road');
+insert into company values('SBT', 'MG Road' );
+insert into company values('Federal','Broadway');
+insert into company values('Indian Bank', 'Cochin');
+insert into company values('SIB', 'Ernakulam');
+insert into company values('HDFC', 'Palace Road');
+insert into company values('Axis','Cochin');
+insert into company values('City bank', 'Ernakulam');
+insert into works values('E-101', 'SBI', 71000);
+insert into works values('E-102', 'SBI', 90000);
+insert into works values('E-103', 'SBT', 40000);
+insert into works values('E-104', 'Federal', 37000);
+insert into works values('E-105', 'SBT', 17000);
+insert into works values('E-106', 'Indian Bank', 30000);
+insert into works values('E-107', 'SIB', 21000);
+insert into works values('E-108', 'SIB', 18000);
+insert into works values('E-109', 'Indian Bank', 28000);
+insert into works values('E-110', 'SBT', 250000);
+insert into works values('E-111', 'Federal', 40000);
+insert into manages values('E-101', 'E-102');
+insert into manages values('E-102', Null);
+insert into manages values('E-103', 'E-110');
+insert into manages values('E-104', 'E-111');
+insert into manages values('E-105', 'E-110');
+insert into manages values('E-106', 'E-109');
+insert into manages values('E-107', Null);
+insert into manages values('E-108', Null);
+insert into manages values('E-109',Null);
+insert into manages values('E-110', Null);
+insert into manages values('E-111', null);
+
+
+SHOW VARIABLES LIKE 'secure_file_priv';

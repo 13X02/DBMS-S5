@@ -42,4 +42,3 @@ insert into manages values('E-110', Null);
 insert into manages values('E-111', null);
 
 
-SHOW VARIABLES LIKE 'secure_file_priv';

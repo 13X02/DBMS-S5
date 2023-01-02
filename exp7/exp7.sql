@@ -39,17 +39,17 @@ Update dept set manager_id=7 where department_id=4;
 SELECT emp_name, salary FROM emp1 WHERE salary NOT BETWEEN 5000 AND
 35000;
 
-SELECT emp_name, job, hiredate FROM emp1 WHERE hiredate BETWEEN '1990-02-20' AND '1998-05-01' ORDER BY hiredate DESC;
+SELECT emp_name, job, hiredate FROM emp1 WHERE hiredate BETWEEN '1990-02-20' AND '1998-05-01' ORDER BY hiredate;
 
 SELECT emp_name "Employee", salary "Monthly Salary" ,depno FROM emp1
 WHERE salary BETWEEN 5000 AND 30000 AND depno IN (2, 4);
 
-SELECT emp_name, hiredate FROM emp1 WHERE hiredate LIKE '%94';
+SELECT emp_name, hiredate FROM emp1 WHERE hiredate LIKE '1994%';
 
 SELECT emp_name, salary, comm FROM emp1 WHERE comm >0
 ORDER BY salary DESC, comm DESC;
 
-SELECT emp_name, job FROM emp1,dept where emp1.Depno=dept.Department_id;
+SELECT emp_name, job FROM emp1,dept where emp1.Depno=dept.Department_id and dept.manager_id is NULL;
 
 SELECT emp_name FROM emp1 WHERE emp_name LIKE '__a%';
 

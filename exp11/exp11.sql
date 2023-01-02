@@ -22,11 +22,5 @@ SELECT * FROM employee_view;
 
 UPDATE employee_view SET salary = 10;
 
-SELECT * FROM employee_view;
-
-CREATE ASSERTION min_salary
-  CHECK (NOT EXISTS (SELECT * FROM employee WHERE salary < 10000));
-
-INSERT INTO employee (name, da, hra, ta, salary) VALUES ('Mike', 4000, 2000, 1000, 9000);
-
 SELECT * FROM employee;
+

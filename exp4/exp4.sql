@@ -4,7 +4,7 @@ and emp.emp_id=works.emp_id;
 
 
 SELECT emp.emp_name FROM emp, works,company WHERE 
-emp.emp_id = works. emp_id AND works. company_name=
+emp.emp_id = works. emp_id AND works.company_name=
 company.company_name AND emp.city = company.city;
 
 SELECT emp.emp_name,e2.emp_name "manager_name" FROM emp,emp e2,

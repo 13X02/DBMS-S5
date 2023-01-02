@@ -119,6 +119,6 @@ WHERE depno IN (SELECT depno FROM emp1 WHERE emp_name like '%u%') and
 emp1.depno=dept.department_id;
 
 
-SELECT Emp_name, department_name FROM emp1 INNER JOIN dept ON emp1.depno = dept.department_id WHERE emp1.depno IN (SELECT depno FROM emp1 GROUP BY depno HAVING COUNT(*) > 4) ORDER BY department_name, emp_name;
+SELECT Emp_name, department_name FROM emp1 INNER JOIN dept ON emp1.depno = dept.department_id WHERE emp1.depno IN (SELECT depno FROM emp1 GROUP BY depno HAVING COUNT(*) >= 3) ORDER BY department_name, emp_name;
 
 SELECT emp_name "employee", CONCAT(FLOOR(DATEDIFF(CURDATE(), hiredate)/12), ' years ', MOD(DATEDIFF(CURDATE(), hiredate),12), ' months ') "length of service" FROM emp1;

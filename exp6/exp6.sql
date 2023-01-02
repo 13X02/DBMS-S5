@@ -99,7 +99,7 @@ Subject.subjectcode= M_mark.subjectcode group by subjectname;
 select subject.subjectname,count(student.studentname)"NO: OF STUDENTS" from
 subject,m_mark,student where student.studentcode= m_mark.studentcode and
 m_mark.mark<(40* maxmark)/100 and subject.SubjectCode=m_mark.Subjectcode
-group by subject. Subjectname having count(distinct(m_mark.subjectcode))>=1;
+group by subject.Subjectname having count(distinct(m_mark.subjectcode))>=1;
 
 
 
@@ -116,7 +116,7 @@ Faculty.F_code=Subject.faculty_code;
 Select f_name name from Faculty where (select count(subjectcode) from Subject
 where Subject.faculty_code=Faculty.f_code)>1 group by Faculty.f_name;
 
-select studentname,subjectname,mark from Student,Subject,M_mark where
+select studentname,subjectname,mark,round((m_mark.mark/maxmark)*100,2)"Percentage" from Student,Subject,M_mark where
 Student.studentcode=M_mark.studentcode and Subject.subjectcode=
 M_mark.subjectcode order by mark;
 
